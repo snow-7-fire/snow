@@ -1,29 +1,0 @@
-server:
-  port: 8020
-  servlet:
-    context-path: /
-logging:
-  level: 
-    com.jt.mapper: debug
-    
-spring:  application:    name: conusmer-user
-        
-eureka:
-  client:
-    #不会将自己的信息注册到eureka
-    register-with-eureka: false
-    #链接注册中心集群
-    service-url:
-      defaultZone:  http://localhost:7000/eureka
-      
-#开启熔断机制
-feign:  hystrix:    enabled: true
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            #设定熔断器超时时间
-            timeoutInMilliseconds:  3000
