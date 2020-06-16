@@ -1,2 +1,12 @@
 server:
   port: 80
+
+#Spring Email
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: snow.7@qq.com
+    password: cozsftbfgmuxbhha
+    protocol: smtps
+    default-encoding: UTF-8
