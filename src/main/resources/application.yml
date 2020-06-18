@@ -1,2 +1,24 @@
-server:
-  port: 80
+spring:
+  application:
+    name: snow
+  profiles:
+    active: dev
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+    converters:
+      preferred-json-mapper: jackson
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      use-new-id-generator-mappings: false
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        enable_lazy_load_no_trans: true
+    show-sql: true
+    open-in-view: true

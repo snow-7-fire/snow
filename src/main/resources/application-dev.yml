@@ -1,0 +1,24 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/snow
+    username: root
+    password: Ghx01211202
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 20
+      initial-size: 1
+      min-idle: 2
+      max-wait: 60000
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
